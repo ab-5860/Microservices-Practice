@@ -1,0 +1,17 @@
+-->User-service:
+1) port 9001
+2) /user/1344
+
+--> Contact_service:
+1) port 9002
+2) /contact/user/1344
+
+--> eureka server: 
+server.port: 8761   
+eureka.client.registerWithEureka: false
+eureka.client.fetchRegistry: false
+eureka.server.waitTimeInMsWhenSyncEmpty: 0
+
+-> Make user_service and coontact_service as clients to enable 
+-> add "<spring-cloud.version>2021.0.3</spring-cloud.version>"
+   to pom.xml properties of both services.	
